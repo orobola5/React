@@ -1,6 +1,5 @@
 .input-container {
     height: 50px;
-    width: 330px;
     border: 2px solid var(--primary_green);
     border-radius: 3px;
     display: flex;
@@ -46,4 +45,8 @@
 
 .input-container img{
     height: 16px;
+}
+.input-error-container{
+    height: 25px;
+    margin: 10px 0;
 }

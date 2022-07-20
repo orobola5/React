@@ -1,7 +1,14 @@
-import Login from "./views/authentication/Login";
+// import Login from "./views/authentication/Login";
+import "./App.css"
+import Register from "./views/authentication/Register";
 
-function App(){
-  return <Login/>
+const App=()=>{
+  return(
+    <div className="app">
+      {/* <Login/> */}
+      <Register/>
+    </div>
+  )
+
 }
-
 export default App
