@@ -70,7 +70,7 @@ return (
                                  <Input text="email" handleChange={handleChange}icon={emailIcon} label="email" fieldError={fieldError} />
                                 
                                 <Input text="password" handleChange={handleChange}icon={passwordIcon} label="password" fieldError={fieldError} />
-                                    <button onClick={handleCLick}>Get Into Norbs</button>
+                                    <button className="authentication-button" onClick={handleCLick}>Get Into Norbs</button>
                         </div>
                         <div className="social-media">
                                 <button>

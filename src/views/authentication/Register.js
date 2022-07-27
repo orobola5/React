@@ -1,7 +1,7 @@
 
 import Input from "../../components/reuseable/Input"
 import emailIcon from "../../assets/mail.svg"
-import passwordIcon from "../../assets/key.svg"
+//  import passwordIcon from "../../assets/key.svg"
 import "./authentication.css"
 import React from "react"
 import StepContainer from "../../components/authentication/register/StepContainer"
@@ -10,9 +10,16 @@ import { useState } from "react"
 
 const Register = () => {
     const[userInput,setUserinput]=useState({})
+    const[step,setStep]=useState(1)
     const[fieldError,setFieldError]=useState({
-     email:{message:"",error:false},
-     password: {message:"",error:false}
+
+
+        firstName:{message:"",error:false},
+        lastName: {message:"",error:false}, 
+        email:{message:"",error:false},
+        phone: {message:"",error:false},
+        password: {message:"",error:false},
+        confirmPassword: {message:"",error:false}
  })
  
     const handleChange=(e)=>{
@@ -20,9 +27,9 @@ const Register = () => {
      checkiffieidIsEmpty(e)
  }
  
-    //  const handleCLick=(e)=>{
-    //      console.log(userInput)
-    //  }
+     const handleCLick=(e)=>{
+         console.log(userInput)
+     }
  
      const checkiffieidIsEmpty =(e)=>{
          switch(e.target.name){
@@ -54,27 +61,37 @@ const Register = () => {
      <div className="authenticationContainer">
          <div className="leftside">
          <div className="leftside-container">
-                 <p> 
+                 
                      Dont Have an account?
                      <a href="{Register}">
                          <span style={{color:'var(--primary_green)',marginLeft:'4px'}}>
-                             sign up
+                             Login in
                          </span>
                      </a>
-                 </p>
+                 
                  <div>
                          <div className="welcome-text">
                               <h1>Welcome To Norbs</h1>
                                  <p>We are an event management platform,
                                     aimed at helping you facilitate and run a smooth event</p>
                          </div>
-                         <StepContainer step={1} headerTitle=" lets know you">
-                                 <Input text="email" handleChange={handleChange}icon={emailIcon} label="email" fieldError={fieldError} />
-                                
-                                 <Input text="password" handleChange={handleChange}icon={passwordIcon} label="password" fieldError={fieldError} />
-                                    
+                         {step === 1 && <StepContainer step={1} headerTitle=" lets know you">
+                                 <Input text="text" handleChange={handleChange}icon={emailIcon} label="firstName" fieldError={fieldError} />
+                                 <Input text="text" handleChange={handleChange}icon={emailIcon} label="lastName" fieldError={fieldError} />
+                                 <Input text="text" handleChange={handleChange}icon={emailIcon} label="email" fieldError={fieldError} />
+                        </StepContainer>}
 
-                         </StepContainer>
+                        {step === 2 && <StepContainer step={2} headerTitle=" lets secure your details">
+                                 <Input text="text" handleChange={handleChange}icon={emailIcon} label="phone" fieldError={fieldError} />
+                                 <Input text="text" handleChange={handleChange}icon={emailIcon} label="password" fieldError={fieldError} />
+                                 <Input text="text" handleChange={handleChange}icon={emailIcon} label="confirmPassword" fieldError={fieldError} />
+                        </StepContainer>}
+
+                        {step === 1 && <button  onClick={()=>setStep(2)} style={{width:'100%'}} className="authentication-button"> Next Step</button>}
+                        { step === 2 && <div style ={{display:"flex",justifyContent:"space-between",width:"70%"}}>
+                                <button onClick={()=>setStep(1)} style={{width:'45%'}} className="authentication-button-alternate"> Go Back</button>
+                                <button style={{width:'45%'}} className="authentication-button"  onClick={handleCLick}> Register</button>
+                         </div>}
                          <div className="social-media">
                                  <button>
                                      <div className="social-media-icon"></div>

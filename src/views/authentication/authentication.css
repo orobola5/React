@@ -15,7 +15,7 @@
     background-color: var(--primary_green);
 }
 .welcome-text{
-    margin-top: 3rem;
+    margin-top: 1rem;
     width: 80%;
 }
 .welcome-text h1{
@@ -31,14 +31,14 @@
 .leftside-container{
     width: 80%;
 }
-.input-button-fields button{
+.authentication-button{
     border: unset;
-    background-color: var(--primary_green);
+    background-color: white;
     color: black;
     font-weight: bold;
     font-size: 14px;
     border-radius: 4px;
-    width: 350px;
+  cursor: pointer;
     height: 50px;
 }
 .leftside-container a{
@@ -90,4 +90,12 @@
     width: 12%;
     padding: 5px;
     border-radius: 4px;
+}
+.authentication-button-alternate{
+    background-color:transparent;
+    color: var(--primary_green);
+    border: 1px solid white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
 }

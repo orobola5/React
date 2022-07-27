@@ -11,9 +11,10 @@
 }
 
 .label-container{
-    background-color: var(--primary_green);
+    background-color: white;
     height: 20px;
-    width: 63px;
+    width: 65px;
+    padding: 0 5px;
     border-radius: 4px;
     position: absolute;
     left: 18px;
@@ -23,6 +24,13 @@
     justify-content: center;
     align-items: center;
 }
+..label-container label{
+   font-size: 10px;
+   color: black;
+   font-weight: bold;
+   text-transform: capitalize;
+}
+
 
 .input-container input{
     height: auto;
