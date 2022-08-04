@@ -1,0 +1,14 @@
+.dashboardContainer{
+    display: flex;
+
+}
+.dashboardHeader{
+    background-color: var(--primary_black);
+    width: 90vw;
+    height:10vh ;
+}
+.dashboardSideNav{
+    width: 10vw;
+    height: 100vh;
+    background-color: var(--primary_black);
+}

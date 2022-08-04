@@ -1,0 +1,18 @@
+import React from 'react'
+import Header from './Header'
+import SideNav from './SideNav'
+
+
+const Container = (props) => {
+  return (
+    <>
+       <SideNav/>
+      <div>
+       <Header/>
+        {props.children}
+      </div>
+    </>
+  )
+}
+export default Container
+  

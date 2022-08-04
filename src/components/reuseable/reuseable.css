@@ -24,7 +24,7 @@
     justify-content: center;
     align-items: center;
 }
-..label-container label{
+.label-container label{
    font-size: 10px;
    color: black;
    font-weight: bold;

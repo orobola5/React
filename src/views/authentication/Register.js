@@ -6,9 +6,13 @@ import "./authentication.css"
 import React from "react"
 import StepContainer from "../../components/authentication/register/StepContainer"
 import { useState } from "react"
+import {useNavigate} from "react-router-dom";
 
 
 const Register = () => {
+
+    let navigate = useNavigate();
+
     const[userInput,setUserinput]=useState({})
     const[step,setStep]=useState(1)
     const[fieldError,setFieldError]=useState({
@@ -20,15 +24,17 @@ const Register = () => {
         phone: {message:"",error:false},
         password: {message:"",error:false},
         confirmPassword: {message:"",error:false}
- })
+ });
+ 
  
     const handleChange=(e)=>{
      setUserinput({...userInput,[e.target.name]:e.target.value})
      checkiffieidIsEmpty(e)
  }
  
-     const handleCLick=(e)=>{
-         console.log(userInput)
+     const handleCLick=()=>{
+         console.log(userInput);
+         navigate("/Login");
      }
  
      const checkiffieidIsEmpty =(e)=>{
@@ -60,21 +66,23 @@ const Register = () => {
  return (
      <div className="authenticationContainer">
          <div className="leftside">
-         <div className="leftside-container">
-                 
+            <div className="leftside-container">
+                    <a onClick={()=>navigate("/login")}>
                      Dont Have an account?
-                     <a href="{Register}">
+                  
                          <span style={{color:'var(--primary_green)',marginLeft:'4px'}}>
                              Login in
                          </span>
                      </a>
                  
-                 <div>
+                
                          <div className="welcome-text">
                               <h1>Welcome To Norbs</h1>
                                  <p>We are an event management platform,
                                     aimed at helping you facilitate and run a smooth event</p>
                          </div>
+
+            <div>
                          {step === 1 && <StepContainer step={1} headerTitle=" lets know you">
                                  <Input text="text" handleChange={handleChange}icon={emailIcon} label="firstName" fieldError={fieldError} />
                                  <Input text="text" handleChange={handleChange}icon={emailIcon} label="lastName" fieldError={fieldError} />
