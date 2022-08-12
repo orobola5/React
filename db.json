@@ -1,0 +1,31 @@
+{
+  "accounts": [
+    {
+      "firstName": "love",
+      "lastName": "olanrewaju",
+      "email": "olanrewajulove2@gmail.com",
+      "phone": "78763",
+      "password": "5656",
+      "confirmPassword": "5656",
+      "id": 1
+    },
+    {
+      "firstName": "tinuke",
+      "lastName": "olanrewaju",
+      "email": "atinuke@Gmail.com",
+      "phone": "08097986754",
+      "password": "4567",
+      "confirmPassword": "4567",
+      "id": 2
+    },
+    {
+      "firstName": "tinuke",
+      "lastName": "olanrewaju",
+      "email": "atinuke@Gmail.com",
+      "phone": "08097986754",
+      "password": "4567",
+      "confirmPassword": "4567",
+      "id": 3
+    }
+  ]
+}

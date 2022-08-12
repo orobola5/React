@@ -1,12 +1,13 @@
 
 import Input from "../../components/reuseable/Input"
 import emailIcon from "../../assets/mail.svg"
-//  import passwordIcon from "../../assets/key.svg"
+import passwordIcon from "../../assets/key.svg"
 import "./authentication.css"
 import React from "react"
 import StepContainer from "../../components/authentication/register/StepContainer"
 import { useState } from "react"
 import {useNavigate} from "react-router-dom";
+import axios from "axios"
 
 
 const Register = () => {
@@ -15,7 +16,9 @@ const Register = () => {
 
     const[userInput,setUserinput]=useState({})
     const[step,setStep]=useState(1)
-    const[fieldError,setFieldError]=useState({
+    // const[loading, setLoading]=useState(false)
+    const[fieldError,setFieldError]=useState(
+        {
 
 
         firstName:{message:"",error:false},
@@ -33,8 +36,12 @@ const Register = () => {
  }
  
      const handleCLick=()=>{
-         console.log(userInput);
-         navigate("/Login");
+        // setLoading(true)
+        axios.post("http://localhost:5000/accounts",userInput).
+            then((data)=>[console.log(data)]).
+            catch((error)=>console.log(error))
+            // finally(()=>setLoading(false))
+
      }
  
      const checkiffieidIsEmpty =(e)=>{

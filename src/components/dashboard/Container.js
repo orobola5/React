@@ -7,7 +7,7 @@ const Container = (props) => {
   return (
     <>
        <SideNav/>
-      <div>
+      <div className='dashboardBodyContainer'>
        <Header/>
         {props.children}
       </div>

@@ -4,6 +4,7 @@ import passwordIcon from "../../assets/key.svg"
 import "./authentication.css"
 import { useState } from "react"
 import {useNavigate} from "react-router-dom";
+import axios from "axios"
 
 
 const Login = () => {
@@ -20,9 +21,15 @@ const Login = () => {
     setUserinput({...userInput,[e.target.name]:e.target.value})
     checkiffieidIsEmpty(e)
 }
+const handleCLick=()=>{
+  
+    axios.get('http://localhost:3004/accounts/?email=${userInput["email"]}').
+        then((result)=>{
+            result.data[0].password ===userInput["password"] && navigate("/dashboard")
+           
+        }).
 
-    const handleCLick=(e)=>{
-        console.log(userInput)
+        catch((error)=>console.log(error))
     }
 
     const checkiffieidIsEmpty =(e)=>{
