@@ -27,5 +27,34 @@
       "confirmPassword": "4567",
       "id": 3
     }
+  ],
+  "events" :[
+    {
+      "id":1,
+      "date_created":"2015-12-23",
+      "date_updated":"2015-12-23",
+      "location":"",
+      "venue": "",
+      "stop_time":"",
+      "start_time":"",
+      "event-theme":"",
+      "description":"",
+      "event-category":"",
+      "event_date":"",
+      "user":"",
+      "host":"",
+      "guests":[],
+      "attendees":[],
+      "event-banner":"",
+      "event-image":"",
+      "sponsors":[],
+      "ticket-category":"",
+      "ticket-fee":"",
+      "event-team":[],
+      "event_dress_code":"",
+      "number_of_seats":"",
+      "available-tickets":""
+
+    }
   ]
 }

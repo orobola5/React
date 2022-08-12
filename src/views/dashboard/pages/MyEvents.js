@@ -3,7 +3,7 @@ import "./myEvent.css"
 
 const MyEvents = () => {
   return (
-    <div>
+    <div className='my-events-container'>
       <div className='my-events-header'>
         <div className='my-events-header-filter'>
           <input type="date" />

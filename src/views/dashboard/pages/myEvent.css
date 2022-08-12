@@ -2,6 +2,7 @@
     display:flex;
     justify-content:space-between;
     padding: 10px 10px;
+    background-color: white;
 
 }
 .my-events-header > button{
@@ -20,4 +21,8 @@
     height: 20px;
     padding: 10px;
 
+}
+.my-events-container{
+    padding: 20px;
+    border-radius:10px ;
 }
