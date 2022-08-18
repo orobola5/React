@@ -56,5 +56,20 @@
       "available-tickets":""
 
     }
+  ],
+  "fakeEvents":[
+    { "title":"Alakija",
+      "description":"today is the day the lord has made"
+    },
+
+    { "title":"Norbs",
+      "description":"get together landmark beach party"
+    },
+
+    { "title":"Huncho",
+      "description":"let make some noise!!!"
+    }
+
+
   ]
 }
