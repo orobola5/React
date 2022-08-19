@@ -1,7 +1,6 @@
 
 import Input from "../../components/reuseable/Input"
 import emailIcon from "../../assets/mail.svg"
-import passwordIcon from "../../assets/key.svg"
 import "./authentication.css"
 import React from "react"
 import StepContainer from "../../components/authentication/register/StepContainer"
@@ -37,9 +36,9 @@ const Register = () => {
  
      const handleCLick=()=>{
         // setLoading(true)
-        axios.post("http://localhost:5000/accounts",userInput).
-            then((data)=>[console.log(data)]).
-            catch((error)=>console.log(error))
+        axios.post("http://localhost:5000/accounts",userInput)
+        .then((data)=>[console.log(data)])
+        .catch((error)=>console.log(error))
             // finally(()=>setLoading(false))
 
      }

@@ -1,6 +1,7 @@
 import './myEvents.css';
 import React from "react"
-const MyEvent=(event)=>{
+const MyEvent=(props)=>{
+ 
     return(
         <div className="event-card">
             <div className="image-container" 
@@ -9,9 +10,9 @@ const MyEvent=(event)=>{
             </div>
             <div className="event-details">
                 <p>Event Title</p>
-                <h5>{event.title} </h5>
+                <h5>{props.event.title} </h5>
                 <p>Event Description</p>
-                <h5>{event.description}</h5>
+                <h5>{props.event.description}</h5>
 
             </div>
             <div className="event-actions">
